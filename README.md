@@ -1,52 +1,102 @@
-### Escuela Colombiana de Ingeniería
-### Arquitecturas de Software - ARSW
+# 🎓 Escuela Colombiana de Ingeniería  
+## 🏗️ Arquitecturas de Software - ARSW  
 
-## Escalamiento en Azure con Maquinas Virtuales, Sacale Sets y Service Plans
+# 🚀 Escalamiento en Azure con Máquinas Virtuales, Scale Sets y Service Plans
 
-### Dependencias
-* Cree una cuenta gratuita dentro de Azure. Para hacerlo puede guiarse de esta [documentación](https://azure.microsoft.com/es-es/free/students/). Al hacerlo usted contará con $100 USD para gastar durante 12 meses.
-Antes de iniciar con el laboratorio, revise la siguiente documentación sobre las [Azure Functions](https://www.c-sharpcorner.com/article/an-overview-of-azure-functions/)
 
-### Parte 0 - Entendiendo el escenario de calidad
+---
 
-Adjunto a este laboratorio usted podrá encontrar una aplicación totalmente desarrollada que tiene como objetivo calcular el enésimo valor de la secuencia de Fibonnaci.
+## 👨‍💻 Developers
 
-**Escalabilidad**
-Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000) de la secuencia de Fibonacci de forma concurrente y el sistema se encuentra bajo condiciones normales de operación, todas las peticiones deben ser respondidas y el consumo de CPU del sistema no puede superar el 70%.
+- 👨‍💻 **Juan Pablo Caballero**
+- 👨‍💻 **Robinson Steven Nuñez**
 
-### Escalabilidad Serverless (Functions)
+---
 
-1. Cree una Function App tal cual como se muestra en las  imagenes.
+## 📌 Dependencias
 
-![](images/part3/part3-function-config.png)
+- Cree una cuenta gratuita en Azure. Puede guiarse con esta [documentación](https://azure.microsoft.com/es-es/free/students/).  
+  Al hacerlo, contará con **$100 USD** para gastar durante **12 meses**.
 
-![](images/part3/part3-function-configii.png)
+- Antes de iniciar con el laboratorio, revise la siguiente documentación sobre [Azure Functions](https://www.c-sharpcorner.com/article/an-overview-of-azure-functions/).
 
-2. Instale la extensión de **Azure Functions** para Visual Studio Code.
+---
 
-![](images/part3/part3-install-extension.png)
+## 📖 Parte 0 - Entendiendo el escenario de calidad
 
-3. Despliegue la Function de Fibonacci a Azure usando Visual Studio Code. La primera vez que lo haga se le va a pedir autenticarse, siga las instrucciones.
+Adjunto a este laboratorio encontrará una aplicación totalmente desarrollada que tiene como objetivo calcular el **enésimo valor de la secuencia de Fibonacci**.
 
-![](images/part3/part3-deploy-function-1.png)
+### ⚙️ Escalabilidad
 
-![](images/part3/part3-deploy-function-2.png)
+Cuando un conjunto de usuarios consulta un enésimo número de la secuencia de Fibonacci **superior a 1.000.000** de forma concurrente y el sistema se encuentra bajo condiciones normales de operación, todas las peticiones deben ser respondidas y el consumo de CPU del sistema **no puede superar el 70%**.
 
-4. Dirijase al portal de Azure y pruebe la function.
+---
 
-![](images/part3/part3-test-function.png)
+## ☁️ Escalabilidad Serverless (Functions)
 
-5. Modifique la coleción de POSTMAN con NEWMAN de tal forma que pueda enviar 10 peticiones concurrentes. Verifique los resultados y presente un informe.
+### 1️⃣ Crear la Function App
+Cree una **Function App** tal como se muestra en las imágenes.
 
-6. Cree una nueva Function que resuleva el problema de Fibonacci pero esta vez utilice un enfoque recursivo con memoization. Pruebe la función varias veces, después no haga nada por al menos 5 minutos. Pruebe la función de nuevo con los valores anteriores. ¿Cuál es el comportamiento?.
+![Function Config](images/part3/part3-function-config.png)  
+![Function Config II](images/part3/part3-function-configii.png)
 
-**Preguntas**
+---
 
-* ¿Qué es un Azure Function?
-* ¿Qué es serverless?
-* ¿Qué es el runtime y que implica seleccionarlo al momento de crear el Function App?
-* ¿Por qué es necesario crear un Storage Account de la mano de un Function App?
-* ¿Cuáles son los tipos de planes para un Function App?, ¿En qué se diferencias?, mencione ventajas y desventajas de cada uno de ellos.
-* ¿Por qué la memoization falla o no funciona de forma correcta?
-* ¿Cómo funciona el sistema de facturación de las Function App?
-* Informe
+### 2️⃣ Instalar la extensión de Azure Functions
+Instale la extensión de **Azure Functions** para **Visual Studio Code**.
+
+![Install Extension](images/part3/part3-install-extension.png)
+
+---
+
+### 3️⃣ Desplegar la Function a Azure
+Despliegue la Function de Fibonacci a Azure usando **Visual Studio Code**.  
+La primera vez que lo haga, se le pedirá autenticarse; siga las instrucciones.
+
+![Deploy Function 1](images/part3/part3-deploy-function-1.png)  
+![Deploy Function 2](images/part3/part3-deploy-function-2.png)
+
+---
+
+### 4️⃣ Probar la Function
+Diríjase al portal de Azure y pruebe la Function.
+
+![Test Function](images/part3/part3-test-function.png)
+
+---
+
+### 5️⃣ Modificar la colección de Postman con Newman
+Modifique la colección de **Postman** con **Newman** de tal forma que pueda enviar **10 peticiones concurrentes**.  
+Verifique los resultados y presente un informe.
+
+---
+
+### 6️⃣ Crear una nueva Function con memoization
+Cree una nueva Function que resuelva el problema de Fibonacci, pero esta vez utilizando un enfoque **recursivo con memoization**.
+
+Pruebe la función varias veces, luego no haga nada durante al menos **5 minutos**.  
+Después, pruebe la función nuevamente con los valores anteriores.
+
+**¿Cuál es el comportamiento?**
+
+---
+
+## ❓ Preguntas
+
+- ¿Qué es un Azure Function?
+- ¿Qué es serverless?
+- ¿Qué es el runtime y qué implica seleccionarlo al momento de crear el Function App?
+- ¿Por qué es necesario crear un Storage Account junto con un Function App?
+- ¿Cuáles son los tipos de planes para un Function App?  
+  ¿En qué se diferencian? Mencione ventajas y desventajas de cada uno.
+- ¿Por qué la memoization falla o no funciona correctamente?
+- ¿Cómo funciona el sistema de facturación de las Function App?
+- Informe
+
+---
+
+## 📄 Solución Parte 1 a 6 y Preguntas
+
+👉 [**Ver el Desarrollo de la parte 1 a 6 y las Respuestas a las Preguntas**](docs/Parte1-LAB10.pdf)
+
+---
