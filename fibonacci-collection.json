@@ -1,0 +1,12 @@
+{
+  "info": { "name": "Fibonacci", "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json" },
+  "item": [{
+    "name": "Fibonacci Request",
+    "request": {
+      "method": "POST",
+      "header": [{"key": "Content-Type", "value": "application/json"}],
+      "body": { "mode": "raw", "raw": "{\"nth\": 1000000}" },
+      "url": "https://functionprojectfibonacci1-ctbrdkb6ajdkf4dw.eastus2-01.azurewebsites.net/api/fibonacci"
+    }
+  }]
+}
